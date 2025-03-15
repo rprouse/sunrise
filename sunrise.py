@@ -90,6 +90,8 @@ def calc(
     log.debug(f"Ecliptic longitude     L       = {_deg2human(L_degrees)}")
 
     Lambda_radians = radians(L_degrees)
+    log.debug(f"Ecliptic longitude     Lambda  = {L_degrees}°")
+    log.debug(f"Ecliptic longitude     Lambda  = {Lambda_radians}rad")
 
     # Solar transit (Julian date)
     J_transit = (2451545.0 + J_ + 0.0053 * sin(M_radians) - 0.0069 * sin(2 * Lambda_radians))
