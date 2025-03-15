@@ -1,4 +1,3 @@
-using System;
 using Microsoft.Extensions.Logging;
 using SunriseCalculator;
 
@@ -21,7 +20,7 @@ double elevation = 74;
 TimeZoneInfo torontoTimeZone = TimeZoneInfo.FindSystemTimeZoneById("America/Toronto");
 
 // Calculate and print results
-var result = sunriseCalculator.Calc(
+var result = sunriseCalculator.Calculate(
     DateTimeOffset.UtcNow,
     latitude,
     longitude,

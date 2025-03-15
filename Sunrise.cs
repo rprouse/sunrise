@@ -24,7 +24,7 @@ public class Sunrise(ILogger logger)
     /// <param name="debugTz">The time zone to use for debugging purposes.</param>
     /// <returns>A <see cref="SunriseResult"/> object containing the sunrise and sunset times, and whether it is a polar day.</returns>
     /// <exception cref="ArgumentException">Thrown when the sun is up all day (polar day).</exception>
-    public SunriseResult Calc(
+    public SunriseResult Calculate(
         DateTimeOffset day,
         double latitude,
         double longitude,
