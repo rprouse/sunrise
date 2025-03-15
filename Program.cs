@@ -6,7 +6,7 @@ using SunriseCalculator;
 using ILoggerFactory loggerFactory = LoggerFactory.Create(builder =>
 {
     builder.AddConsole();
-    builder.SetMinimumLevel(LogLevel.Debug);
+    builder.SetMinimumLevel(LogLevel.Information);
 });
 
 ILogger logger = loggerFactory.CreateLogger<Sunrise>();
@@ -17,16 +17,12 @@ double latitude = 43.268399;
 double longitude = -79.774549;
 double elevation = 0;
 
-// Get current timestamp (Unix epoch time)
-DateTimeOffset now = DateTimeOffset.UtcNow;
-double currentTime = now.ToUnixTimeSeconds();
-
 // Get Toronto timezone
 TimeZoneInfo torontoTimeZone = TimeZoneInfo.FindSystemTimeZoneById("America/Toronto");
 
 // Calculate and print results
 var result = sunriseCalculator.Calc(
-    currentTime,
+    DateTimeOffset.UtcNow,
     latitude,
     longitude,
     elevation,
