@@ -15,7 +15,7 @@ var sunriseCalculator = new Sunrise(logger);
 // Parameters from the original main function
 double latitude = 43.268399;
 double longitude = -79.774549;
-double elevation = 0;
+double elevation = 74;
 
 // Get Toronto timezone
 TimeZoneInfo torontoTimeZone = TimeZoneInfo.FindSystemTimeZoneById("America/Toronto");
